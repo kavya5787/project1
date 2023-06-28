@@ -1,0 +1,919 @@
+
+
+@font-face {
+    font-family: 'FunSized';
+    src: url('../fonts/FunSized.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'ANTSYPAN';
+    src: url('../fonts/ANTSYPAN.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'Garden Sans';
+    src: url('../fonts/Garden Sans.ttf') format('truetype');
+}
+body {
+    font-size: 15px;
+    color: #656565;
+    font-weight: normal;
+    line-height: 1.4em;
+}
+
+html {
+    background: #f1f1f1;
+}
+
+a {
+    color: green;
+}
+
+    wa:hover, a:focus {
+        color: yellow;
+    }
+
+label {
+    display: block;
+    color: #777;
+    font-family: 'ProximaNova-Semibold';
+    font-size: 14px;
+}
+
+/* --------------------------- Admin Login Page Start ------------------------- */
+
+.login-page-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../Images/bg-aboutus.jpg")no-repeat center top;
+    background-size: cover;
+}
+
+    .login-page-wrap::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(31,31,31,0.8);
+    }
+
+.login-form-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    outline: 0;
+}
+
+.hms-login-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+    background: linear-gradient(90deg, yellow, green);
+}
+
+.hms-login-form {
+    width: 300px;
+    text-align: center;
+}
+
+.logo {
+    margin: 0 0 50px;
+}
+
+.login-form-wrap .form-group {
+    margin: 0 0 30px;
+}
+
+.login-form-wrap .form-control {
+    border: none;
+    border-bottom: 2px solid #b7b7b7;
+    padding: 6px 0;
+    color: black;
+    height: 45px;
+    background: none;
+}
+
+    .login-form-wrap .form-control::-webkit-input-placeholder {
+        color: #fff;
+    }
+
+.login-form-wrap .site-btn {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+    .login-form-wrap .site-btn::focus {
+        background: none;
+        outline: none;
+    }
+
+    .login-form-wrap .site-btn i {
+        position: static;
+        border: 2px solid green;
+        top: 0;
+        background: none;
+        font-size: 26px;
+        outline: none;
+        width: 45px;
+        height: 45px;
+        line-height: 43px;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    .login-form-wrap .site-btn:hover i {
+        background: #ff5a60;
+    }
+
+.admin-siteInfo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+    .admin-siteInfo p {
+        margin: 0;
+        font-size: 13px;
+        color: #d8d8d8;
+    }
+
+        .admin-siteInfo p a:hover {
+            color: #fff;
+        }
+
+/* ------------------------------ Admin Login Page End ---------------------------- */
+
+/* ------------------------------ Dashboard Page Start ---------------------------- */
+
+.db-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 39px;
+    background: #f1f1f1;
+}
+
+.db-adminbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: green;
+    z-index: 1;
+    font-size: 14px;
+}
+
+    .db-adminbar ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background: green;
+    }
+
+.admin-top-default {
+    float: left;
+}
+
+.admin-top-secondary {
+    float: right;
+}
+
+.db-adminbar ul li {
+    display: inline-block;
+    float: left;
+    position: relative;
+
+}
+
+    .db-adminbar ul li a, .db-adminmenu-wrap ul li a {
+        text-decoration: none;
+        color: #eee;
+        display: inline-block;
+        padding: 10px;
+        background-color: green;
+    }
+
+        .db-adminbar ul li a.db-logo {
+            width: 43px;
+            padding: 9px 10px;
+            display: block;
+        }
+
+        .db-adminbar ul li a img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .db-adminbar ul li a i, .db-adminmenu-wrap ul li a i {
+            font-size: 16px;
+            color:white;
+        }
+
+        .admin-top-default li a i, .db-adminmenu-wrap ul li a i,
+        .db-adminbar ul li .db-submenu li a i {
+            top: 1px;
+            position: relative;
+            margin-right: 7px;
+        }
+
+    .db-adminbar ul li:hover a, .db-adminmenu-wrap ul li:hover a {
+        background: yellow;
+        color: white;
+    }
+
+.db-adminmenu-wrap ul li:hover a {
+    background: yellow;
+}
+
+.db-submenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #32373c;
+    width: 160px;
+    display: none;
+}
+
+.db-adminbar ul li .db-submenu li, .db-adminbar ul li .db-submenu li a {
+    display: block;
+    float: none;
+    background-color:green;
+    color:white;
+}
+
+.db-adminbar ul li:hover .db-submenu,
+.db-adminmenu-wrap ul li:hover .db-submenu {
+    display: block;
+    background-color: green;
+    color: white;
+}
+
+    .db-adminbar ul li:hover .db-submenu li a,
+    .db-adminmenu-wrap ul li:hover .db-submenu li a {
+        color: #eee;
+    }
+
+.db-adminmenu-wrap ul li .db-submenu li a {
+    background: green;
+    color: white;
+}
+
+.db-adminbar ul li .db-submenu li:hover a,
+.db-adminmenu-wrap ul li .db-submenu li:hover a {
+    color: #ff5a60;
+}
+
+.db-adminmenu-wrap ul li .db-submenu li.current a {
+    font-family: 'ProximaNova-Semibold';
+    color: #fff;
+}
+
+.db-adminmenu-wrap ul li.current-item .db-submenu {
+    position: relative;
+    display: block;
+    left: 0;
+}
+
+.db-adminmenu-back {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: green;
+    width: 160px;
+}
+
+.db-adminmenu-wrap {
+    position: relative;
+    float: left;
+    z-index: 1;
+    width: 160px;
+}
+
+    .db-adminmenu-wrap ul {
+        margin: 15px 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+        .db-adminmenu-wrap ul li, .db-adminmenu-wrap ul li a {
+            display: block;
+            position: relative;
+            font-size: 14px;
+        }
+
+            .db-adminmenu-wrap ul li.current-item a {
+                background: yellow;
+                color: #fff;
+            }
+
+            .db-adminmenu-wrap ul li.current-item::before {
+                content: '';
+                position: absolute;
+                top: 12px;
+                right: 0;
+                height: 0;
+                width: 0;
+                border: 8px solid transparent;
+                border-right-color: #f1f1f1;
+                z-index: 1;
+            }
+
+            .db-adminmenu-wrap ul li .db-submenu {
+                top: 0;
+                left: 100%;
+                margin: 0;
+            }
+
+            .db-adminmenu-wrap ul li .db-submenu {
+                padding: 4px 0;
+            }
+
+                .db-adminmenu-wrap ul li .db-submenu li a {
+                    padding: 6px 15px;
+                }
+
+.db-content {
+    margin-left: 160px;
+    padding: 20px;
+    background-color:yellow;
+}
+
+.title-wrap {
+    display: inline-block;
+}
+
+.db-entry-title {
+    margin: 0;
+    font-weight: 400;
+    color: white;
+    background: black;
+    padding: 13px 20px;
+    display: inline-block;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    border-left: 4px solid green;
+    min-width: 200px;
+}
+
+.add-form {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    padding-top: 3px;
+}
+
+    .add-form a.btn-default {
+        display: block;
+        line-height: initial;
+        padding: 9px 27px;
+    }
+
+.panel-bx {
+    background-image: url('../../Images/air.jpg');
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+    padding: 20px;
+    margin-top: 20px;
+    min-height: 500px;
+    color:black;
+}
+
+    .panel-bx h2 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 20px;
+        color: #23282d;
+        margin-bottom: 15px;
+    }
+
+.content-wrap p {
+    padding-bottom: 15px;
+    line-height: 1.6em;
+    margin: 0;
+    color: #777;
+}
+
+/* --------------------------- Dashboard Page End --------------------------- */
+
+/*------------------------ Change Password Page Start -----------------------*/
+
+.db-form {
+    width: 100%;
+}
+
+    .db-form .btn-default {
+        float: left;
+    }
+
+.alert {
+    background: red;
+    color: white;
+    padding: 8px 15px;
+    border: 1px solid rgba(175, 36, 29, 0.48);
+    margin-bottom: 20px;
+}
+
+    .alert span {
+        font-weight: 600;
+        margin-right: 5px;
+    }
+
+    .alert.sucess {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        width: 165px;
+        margin-left: -75px;
+        margin-top: -17px;
+        background: #4F8A10;
+        color: #fff;
+        text-align: center;
+        border: none;
+        box-shadow: 0 0 20px 1px rgba(0,0,0,0.4);
+        z-index: 111;
+    }
+
+.note {
+    font-size: 10px;
+    display: block;
+    padding-top: 2px;
+}
+
+/*-------------------------------- Change Password Page End ----------------------------*/
+
+/*-------------------------------- Rooms Page start ------------------------------------*/
+
+.db-form textarea.form-control {
+    height: 200px;
+    resize: none;
+    line-height: inherit;
+    font-family: 'ProximaNova-Regular',sans-serif;
+}
+
+#cke_1_contents {
+    height: 400px !important;
+}
+
+#dataTable_wrapper {
+    display: inline-block;
+    width: 100%;
+}
+
+div.dataTables_wrapper div.dataTables_length label,
+div.dataTables_wrapper div.dataTables_filter label {
+    font-family: 'ProximaNova-Regular';
+    font-size: 14px;
+    margin: 0;
+    display: inline-block;
+}
+
+div.dataTables_wrapper div.dataTables_length .form-control {
+    height: 35px;
+    text-align: center;
+    padding: 6px 15px;
+    line-height: initial;
+    margin: 0 7px;
+}
+
+div.dataTables_wrapper div.dataTables_filter .form-control {
+    height: 35px;
+    box-sizing: border-box;
+    margin-left: 15px;
+    padding: 6px 15px;
+}
+
+table.dataTable td.dataTables_empty, table.dataTable th.dataTables_empty {
+    padding: 20px 15px;
+    color: #d80505;
+}
+
+.data-list-table {
+    width: 100%;
+    text-align: left;
+}
+
+.data-list-table {
+    border-spacing: 0;
+    font-size: 14px;
+}
+
+table.dataTable {
+    margin: 20px 0 50px !important;
+}
+
+.table > thead > tr > th {
+    border-width: 1px;
+    padding: 10px 20px;
+    font-family: 'ProximaNova-Semibold';
+    border-top: 1px solid #ddd !important;
+    border-bottom: none;
+    color: #484545;
+}
+
+.table > tbody > tr > td {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+    .table > tbody > tr > td:first-child {
+        font-family: 'ProximaNova-Semibold';
+    }
+
+.data-list-table thead th, .data-list-table td {
+    padding: 10px;
+}
+
+.data-list-table thead th {
+    border-bottom: 1px solid #e1e1e1;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.data-list-table tbody tr:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.pagination > li {
+    display: inline-block;
+}
+
+    .pagination > li:first-child > a, .pagination > li:first-child > span,
+    .pagination > li:last-child > a, .pagination > li:last-child > span {
+        border-radius: 0;
+    }
+
+    .pagination > li > a, .pagination > li > span {
+        float: none;
+        display: block;
+        margin: 0 3px;
+        font-size: 13px;
+        font-family: 'ProximaNova-Semibold';
+        padding: 7px 14px 5px;
+    }
+
+.col-sn {
+    width: 2.2%;
+}
+
+.col-img {
+    width: 10%;
+}
+
+.col-rmtype {
+    width: 20% !important;
+}
+
+.col-price {
+    width: 8%;
+}
+
+.col-desc {
+    width: 30%;
+}
+
+.col-rmdetl {
+    width: 17%;
+}
+
+.col-st {
+    width: 10%;
+}
+
+.col-cn {
+    width: 9%;
+}
+
+.col-img img {
+    width: 100%;
+    display: block;
+}
+
+.booked-msg {
+    color: #2ca518;
+    font-family: 'ProximaNova-Semibold';
+}
+
+.ac_cn {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+    margin-right: 5px;
+    background: #337ab7;
+    border-radius: 4px;
+    border: 1px solid #2e6da4;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+}
+
+    .ac_cn:last-child {
+        margin-right: 0;
+        background: #d9534f;
+        border-color: #d43f3a;
+    }
+
+/*-------------------------------- Rooms Page End --------------------------------------*/
+
+/*-------------------------------- User Page Start --------------------------------------*/
+
+.col-uname, .col-name {
+    width: 90% !important;
+}
+
+.col-email {
+    width: 52%;
+}
+
+/*-------------------------------- User Page End --------------------------------------*/
+
+/*------------------------------- Post Page Start -------------------------------------*/
+
+.col-cont {
+    width: 38%;
+}
+
+.col-img {
+    width: 10%;
+}
+
+    .col-img.col-pro-img {
+        width: 20% !important;
+    }
+
+.col-pro-uname {
+    width: 25% !important;
+}
+
+.col-pro-name {
+    width: 25% !important;
+}
+
+.col-pro-email {
+    width: 30% !important;
+}
+
+.col-blank {
+    width: 9%;
+}
+
+.post-img img {
+    width: 100%;
+    display: block;
+}
+
+.profile-bx {
+    height: 45px;
+    width: 45px;
+    overflow: hidden;
+    display: block;
+    border: 1px solid #cecece;
+    border-radius: 100%;
+}
+
+    .profile-bx img {
+        height: 45px;
+        object-fit: cover;
+    }
+
+/*------------------------------- Post page End ----------------------------------------*/
+
+/*------------------------------- Media Page Start -------------------------------------*/
+
+.upload-inline {
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.upload-ui {
+    position: relative;
+}
+
+.btn-upload {
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    padding: 12px 18px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08);
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.upload-ui .btn-imgupload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#my_file {
+    display: none;
+}
+
+.upload-ui #customfileupload {
+    position: absolute;
+    bottom: -25px;
+    left: 3px;
+    font-size: 14px;
+}
+
+#customfileupload {
+    display: inline-block;
+}
+
+.media-thumbnail {
+    width: 18.1%;
+    height: 160px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 2% 2% 0;
+    position: relative;
+    overflow: hidden;
+}
+
+    .media-thumbnail img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .media-thumbnail:nth-of-type(5n) {
+        margin-right: 0;
+    }
+
+    .media-thumbnail .ac_cn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #d9534f;
+        border-color: #d43f3a;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+        .media-thumbnail .ac_cn.pub {
+            right: auto;
+            left: 10px;
+            background-color: #5cb85c;
+            border-color: #4cae4c;
+        }
+
+    .media-thumbnail:hover .ac_cn {
+        opacity: 1;
+        visibility: visible;
+    }
+
+.txt-err {
+    color: #d9534f;
+    margin-bottom: 10px;
+}
+
+/*------------------------------- Media page End ----------------------------------------*/
+
+/*------------------------------- Menu page Start ----------------------------------------*/
+
+.menu-listing-wrap, .add-menu-wrap {
+    width: 450px;
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+}
+
+.menu-list, .wigets-holder-wrap {
+    margin-bottom: 10px;
+}
+
+.menu-title, .quick-title {
+    border: 1px solid #dfdfdf;
+    padding: 10px 15px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    background: #fafafa;
+}
+
+    .menu-title:before, .quick-title:before {
+        content: '\f0d7';
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 16px;
+        color: #777777;
+        font-family: 'FontAwesome';
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .menu-title.active:before, .quick-title.active:before {
+        content: '\f0d8';
+    }
+
+.menu-detail, .widget-desc {
+    padding: 15px;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.04);
+    display: none;
+}
+
+    .menu-detail label, .add-menu-wrap form label {
+        font-style: italic;
+    }
+
+.action {
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 2px;
+}
+
+.add-menu-wrap {
+    float: right;
+}
+
+    .menu-listing-wrap h3, .add-menu-wrap h3, .add-widget-wrap h3 {
+        margin: 0 0 15px 0;
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+
+    .add-menu-wrap form {
+        box-shadow: 0 0 5px rgba(0,0,0,0.08) inset;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+/*------------------------------- Menu Page End ------------------------------------------*/
+
+/*------------------------------- Widget Page Start --------------------------------------*/
+
+.wigets-holder-wrap {
+    width: 32.444%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1%;
+}
+
+    .wigets-holder-wrap:nth-of-type(3n) {
+        margin-right: 0;
+    }
+
+    .wigets-holder-wrap .db-form, .add-widget-wrap .db-form {
+        width: 100%;
+    }
+
+.add-widget-wrap {
+    width: 32%;
+    margin-top: 20px;
+}
+
+/*------------------------------- Widget Page End -----------------------------------------*/
+
+/*------------------------------- Employee Page Start -------------------------------------*/
+
+.col-fn {
+    width: 18%;
+}
+
+.col-em {
+    width: 22%;
+}
+
+.col-proimg {
+    width: 10%;
+}
+
+.col-pos {
+    width: 20%;
+}
+
+.col-sal {
+    width: 14%;
+}
+
+/*------------------------------- Employee Page End ---------------------------------------*/
+
+
